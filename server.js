@@ -2,10 +2,16 @@ const { application } = require('express');
 const express = require('express');
 const app = express()
 
+const characters = require('./models/characters')
+
+
 const port = 8000
 
 app.get('/', (req, res) => {
     res.send("Welcome to Steven's Universe!")
+})
+app.get('/characters', (req, res) => {
+    res.send(characters)
 })
 
 app.listen(port, () => {
