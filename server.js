@@ -14,6 +14,9 @@ app.get('/', (req, res) => {
 app.get('/characters', (req, res) => {
     res.render('Index')
 })
+app.get('/characters/:id', (req, res) => {
+    res.send(req.params.id)
+})
 
 app.listen(port, () => {
     console.log(`Listening on port ${port}`)

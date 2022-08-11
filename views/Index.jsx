@@ -2,9 +2,9 @@ import React from 'react'
 import characters from '../models/characters'
 
 const background = {
-    background: 'linear-gradient(45deg, pink, blue) no-repeat',
+    background: 'linear-gradient(45deg, pink, purple) no-repeat',
     backgroundSize: 'cover',
-    height: '80vh'
+    height: '100vh'
 }
 const header = {
 	textAlign: 'center',
@@ -25,7 +25,9 @@ const nameCard = {
     border: '2px solid white',
     height: '50px',
     width: '100px',
-    textAlign: 'center'
+    textAlign: 'center',
+    borderRadius: '15px',
+    padding: '15px 15px'
 }
 
 class Index extends React.Component {
@@ -38,7 +40,7 @@ class Index extends React.Component {
                 <div style={cardContainer}>
                     {characters.map((character, i) => {
                         return (
-                            <div style={nameCard}>{character.name}</div>
+                            <a href={`/characters/${i}`}><div style={nameCard}>{character.name}</div></a>
                        )
                    })}
                 </div>
