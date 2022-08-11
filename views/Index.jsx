@@ -19,15 +19,17 @@ const cardContainer = {
     display: 'flex',
     justifyContent: 'space-evenly',
     flexFlow: 'wrap',
-    marginTop: '20%'
+    marginTop: '15%'
 }
 const nameCard = {
     border: '2px solid white',
     height: '50px',
     width: '100px',
     textAlign: 'center',
+    alignItems: 'center',
     borderRadius: '15px',
-    padding: '15px 15px'
+    padding: '10px 10px',
+    margin: '10px 5px'
 }
 
 class Index extends React.Component {
