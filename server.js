@@ -4,14 +4,15 @@ const app = express()
 
 const characters = require('./models/characters')
 
-
+app.set('view engine', 'jsx')
+app.engine('jsx', require('express-react-views').createEngine())
 const port = 8000
 
 app.get('/', (req, res) => {
     res.send("Welcome to Steven's Universe!")
 })
 app.get('/characters', (req, res) => {
-    res.send(characters)
+    res.render('Index')
 })
 
 app.listen(port, () => {
